@@ -1,7 +1,7 @@
 package com.gmail.zamayaka2013;
 
 public class Board {
-	int nShapes = 4;
+	private int nShapes = 4;
 	private Shape[] board1 = new Shape[nShapes];
 
 	public Board() {
@@ -10,12 +10,16 @@ public class Board {
 
 	public void addToBoard(Shape a) {
 		int i = 0;
+		if (a == null) {
+			System.out.println("Nothing to Add!");
+			return;
+		}
 		for (i = 0; i < nShapes - 1; i++) {
 			if (board1[i] == null) {
-
 				this.board1[i] = a;
-				break;
-			}
+				System.out.println("Shape "+a+" succesefull");
+				return;
+							}
 
 		}
 		if (i == nShapes) {
@@ -23,18 +27,15 @@ public class Board {
 		}
 	}
 
-	public void delFromBoard(Shape a) {
-		int i = 0;
-		for (i = 0; i < nShapes - 1; i++) {
-			if (board1[i] == a) {
+	public void delFromBoard(int n) {
 
-				this.board1[i] = null;
-				System.out.println("Shape DELETED =>>" + a);
-				return;
-			}
-
+		if (board1[n - 1] != null) {
+			System.out.println("Shape number " + n + " is DELETED => " + this.board1[n - 1]);
+			this.board1[n - 1] = null;
+			return;
 		}
-		System.out.println("No such Shape on Board");
+
+		System.out.println("Sorry, No Shape at number "+n);
 	}
 
 	@Override

@@ -28,7 +28,7 @@ public class Rectangle extends Shape {
 		double polP2 = (a.otr(c) + c.otr(d) + d.otr(a)) / 2;
 
 		return Math.sqrt(polP1 * (polP1 - a.otr(b)) * (polP1 - b.otr(c)) * (polP1 - c.otr(a)))
-				+ Math.sqrt(polP2 * (polP2 - a.otr(b)) * (polP2 - b.otr(c)) * (polP2 - c.otr(a)));
+				+ Math.sqrt(polP2 * (polP2 - a.otr(c)) * (polP2 - c.otr(d)) * (polP2 - d.otr(a)));
 	}
 
 	@Override
