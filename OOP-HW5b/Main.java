@@ -11,8 +11,8 @@ public class Main {
 		File fileSum = new File("TWO_in_ONE.txt");
 		
 		System.out.println(fileOne.getName() + " - " + fileOne.exists() + "\n" + fileTwo.getName()+" - "+ fileTwo.exists() + "\n");
-		FileOperations.TwoInOne(fileOne, fileTwo, fileSum);
-		
+//		FileOperations.TwoInOne(fileOne, fileTwo, fileSum);
+		FileOperations.eqWord(fileOne, fileTwo, fileSum);
 	}
 
 }
