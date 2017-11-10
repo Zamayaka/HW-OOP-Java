@@ -9,9 +9,8 @@ public class Main {
 		File fileOne = new File("One.txt");
 		File fileTwo = new File("Two.txt");
 		File fileSum = new File("TWO_in_ONE.txt");
-		
-		System.out.println(fileOne.getName() + " - " + fileOne.exists() + "\n" + fileTwo.getName()+" - "+ fileTwo.exists() + "\n");
-//		FileOperations.TwoInOne(fileOne, fileTwo, fileSum);
+		System.out.println(fileOne.getName() + " - " + fileOne.exists() + "\n" + fileTwo.getName() + " - "
+				+ fileTwo.exists() + "\n");
 		FileOperations.eqWord(fileOne, fileTwo, fileSum);
 	}
 
