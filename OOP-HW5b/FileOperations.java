@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileOperations {
+
 	public static String readFile(File textFile) {
 		String str = "";
 		String strFile = "";
@@ -28,7 +29,7 @@ public class FileOperations {
 		}
 	}
 
-	public static void eqWord(File fileOne, File fileTwo, File fileSum) {
+	public void eqWord(File fileOne, File fileTwo, File fileSum) {
 		String strOne = readFile(fileOne);
 		String strTwo = readFile(fileTwo);
 		String str = "";
